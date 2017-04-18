@@ -10,14 +10,14 @@ data = JSON.stringify(data);
 var options = {
     method: "POST",
     host: "api.weixin.qq.com",
-    path: "/cgi-bin/wxaapp/createwxaqrcode?access_token=5-R9rTlaeHF9bdZPWWh-t9BefbthRfbe5idSzuOSXoSFfPcUOUcTca1QhLNjDVclBK489LX88-hUeT1kL9FV8GBR4fWY78PVxyx_OGnNbJsUEQgAAACMY",
+    path: "/cgi-bin/wxaapp/createwxaqrcode?access_token=ypDm00u1CqpPSbYFxw2VM0kfBh3aAPYSLC8uI0f2e_xPjr_L1jBldcqaC-h4bkqk9QJrPfLNAtwSfFEIC_PmMUX4r2QbdKZ_iBMyx7m9uWWFGt6wXXBrRPkJ_f-0iz7YEHJcACAKNP",
+//记得更换token token有效时间2h
     headers: {
-        "Content-Type": 'application/json',
-        'Content-Length': data.length
+        "Content-Type": "application/json",
+        "Content-Length": data.length
     }
 };
 var req = http.request(options, function (res) {
-    res.setEncoding('utf8');
     res.setEncoding("binary");
     var imgData = "";
     res.on('data', function (chunk) {
